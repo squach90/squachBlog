@@ -2,6 +2,7 @@
 date = '2025-01-18T23:13:02+01:00'
 draft = true
 title = 'Test'
+cover = "img/test.png"
 +++
 
 # Hello

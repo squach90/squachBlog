@@ -1,88 +1,59 @@
 +++
-title= "Showcase"
-date= "2018-07-18"
-author= "Hello Robot"
-hideComments= true
+title = "Showcase"
+date = "2025-01-19"
+author = "Louis"
+hideComments = true
 +++
 
-# Features in updates
-- [native CSS variables showcase](/posts/css-vars/)
+## Tempobot EDF - Votre assistant énergétique ⚡
 
-## Header 2
+Tempobot EDF est un bot Discord couplé à un site web interactif, conçu pour fournir des informations fiables et en temps réel sur les alertes Tempo d'EDF. Avec un système de notifications personnalisées et des commandes simples, vous êtes toujours informé des jours bleus, blancs et rouges, ainsi que des meilleures périodes pour consommer.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. **Donec quis dolor nec nunc mollis interdum vel in purus**. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
+## Fonctionnalités principales 🛠️
 
-> Fusce pharetra suscipit orci nec tempor. Quisque vitae sem sit amet sem mollis consequat. Sed at imperdiet lorem. Vestibulum pharetra faucibus odio, ac feugiat tellus sollicitudin at. Pellentesque varius tristique mi imperdiet dapibus. Duis orci odio, sodales lacinia venenatis sit amet, feugiat et diam.
+- Prévisions pour demain :
+  Consultez les prévisions Tempo de la journée suivante pour anticiper vos besoins.
 
-### Header 3
+- Site web dédié :
+  Accédez à un tableau de bord simple pour visualiser l'historique des jours Tempo, consulter les détails des couleurs, et personnaliser vos notifications.
 
-Nulla libero turpis, lacinia vitae cursus ut, auctor dictum nisl. Fusce varius felis nec sem ullamcorper, at convallis nisi vestibulum. Duis risus odio, porta sit amet placerat mollis, tincidunt non mauris. Suspendisse fringilla, `odio a dignissim pharetra`, est urna sollicitudin urna, eu scelerisque magna ex vitae tellus.
+- Notifications par ntfy.sh :
+  Intégration avec ntfy.sh pour des alertes rapides directement sur vos appareils.
 
-```css
-/* PostCSS code */
+## Exemple de code d'intégration 💻
 
-pre {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  overflow: auto;
+Voici un extrait du code :
 
-  @media ($phone) {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+```javascript
+import fetch from "node-fetch";
 
-  code {
-    background: none !important;
-    color: #ccc;
-    padding: 0;
-    font-size: inherit;
+async function getTodayTempo() {
+  try {
+    const response = await fetch(
+      "https://www.api-couleur-tempo.fr/api/jourTempo/today"
+    );
+    const data = await response.json();
+
+    const colorMap = {
+      1: "🔵 Bleu",
+      2: "⚪️ Blanc",
+      3: "🔴 Rouge",
+    };
+
+    const color = colorMap[data.codeJour] || "Inconnu";
+    return `Aujourd'hui, la couleur Tempo est : **${color}**.`;
+  } catch (error) {
+    return "Erreur : Impossible de récupérer la couleur Tempo du jour.";
   }
 }
 ```
 
-```js
-// JS code
+## Le site web 🌐
 
-const menuTrigger = document.querySelector('.menu-trigger')
-const menu = document.querySelector('.menu')
-const mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth')
-const isMobile = () => window.matchMedia(mobileQuery).matches
-const isMobileMenu = () => {
-  menuTrigger.classList.toggle('hidden', !isMobile())
-  menu.classList.toggle('hidden', isMobile())
-}
+Tempobot EDF est accompagné d'un site moderne et intuitif :
 
-isMobileMenu()
-
-menuTrigger.addEventListener('click', () => menu.classList.toggle('hidden'))
-
-window.addEventListener('resize', isMobileMenu)
-```
-
-```html
-<!-- HTML code -->
-
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Pages }}
-      {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
-```
-
-#### Header 4
-
-Curabitur scelerisque felis viverra varius scelerisque. Ut enim libero, molestie gravida blandit at, mollis ornare tellus. Cras arcu mi, ultrices vel pulvinar vel, volutpat eu tortor. Nullam nec eros quis massa ultrices iaculis sed in metus. Praesent sollicitudin sem sit amet orci tempor gravida.
-
-- Maecenas elementum vitae nibh vitae porttitor.
-- Aenean consequat, risus ut cursus placerat, arcu nulla sodales risus, ut molestie tellus tellus et dui.
-- Integer imperdiet turpis vitae lacus imperdiet, ut ornare ligula auctor. Integer in mi eu velit vehicula suscipit eget vulputate nulla.
-- Etiam vitae enim quis velit lobortis placerat a ut sem.
-  - Curabitur lobortis ante sit amet orci pulvinar, sollicitudin viverra nunc accumsan.
-  - Praesent fermentum orci quis leo facilisis posuere.
-
-Aliquam erat volutpat. In hac habitasse platea dictumst. Nunc ut tincidunt mauris. Sed at gravida risus, id semper magna. Nullam vitae enim mattis, sodales neque non, pharetra elit. Cras sit amet sagittis augue, et finibus turpis. Ut tempus tincidunt diam vel pharetra. Nulla porttitor odio sit amet nulla scelerisque, quis aliquam mi imperdiet. Sed tincidunt dui vel tellus vestibulum rhoncus. Donec tempus ultrices velit.
+- URL : tempobot.example.com
+- Fonctionnalités : [https://tempobotsite.onrender.com/](https://tempobotsite.onrender.com/)
+- - Historique des jours Tempo.
+- - Tutoriels pour comprendre le fonctionnement du système Tempo.
+- - Interface de personnalisation des alertes.

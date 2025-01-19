@@ -1,41 +1,23 @@
 +++
 title = "About"
-date = "2024-07-30"
-author = "Mirus"
-hideComments=true
+date = "2025-01-19"
+author = "squach90"
+hideComments = true
 +++
 
+## Salut
 
-# Hello in a new age
+Je m'appelle **squach90** (sur Internet), un passionné de programmation et de créativité numérique.
+J'ai créé cet espace pour partager mes projets, idées et astuces, en espérant qu'ils vous inspireront.
 
-You can call me Mirus and I forked the original Terminal theme for Hugo, because Radek, the original creator of the theme stop the maintenance and archived the repo. 
+Depuis mes débuts, j'ai exploré un large éventail de sujets : développement web, Arduino, création de jeux vidéo et même des applications mobiles. J'adore repousser mes limites et trouver des solutions innovantes.
 
-So I already pushed a few improvements that I did for my humble blog and I'm going to add some more features in the future, also any contribution is welcome 
+Quelques-unes de mes réalisations incluent :
 
-Below you can read the original about from Radek
+- Un **mini contrôleur de musique** entièrement customisé avec Arduino.
+- Une **application de suivi de jeux** intégrant les API de Steam, Epic Games et GOG.
+- Un **bot** pour suivre les actualité **EDF tempo**: [https://squach90.github.io/TempoBotWeb/](https://squach90.github.io/TempoBotWeb/)
 
-```text
-# Hi there
+Je suis toujours en quête d'apprendre et d'améliorer mes compétences, alors si vous aimez l'informatique, les projets DIY, ou si vous êtes curieux, vous êtes au bon endroit.
 
-My name is Radek and I'm the author of this theme.
-I made it to help you present your ideas easier.
-
-We all know how hard is to start something on the web,
-especially these days. You need to prepare a bunch of stuff,
-configure them and when that’s done — create the content.
-
-This theme is pretty basic and covers all of the essentials.
-All you have to do is start typing!
-
-The theme includes:
-
-- **5 duotone themes**,
-depending on your preferences (orange, red, blue, green, pink)
-- [**Fira Code**](https://github.com/tonsky/FiraCode)
-as default monospaced font. It's gorgeous!
-- **really nice, custom duotone** syntax highlighting based on
-[**PrismJS**](https://prismjs.com)
-- mobile friendly layout
-
-So, there you have it... enjoy!
-```
+Prenez un moment pour découvrir ce que je partage ici... et surtout, amusez-vous !
